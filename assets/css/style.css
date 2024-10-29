@@ -8,9 +8,6 @@
     box-sizing: border-box;
 }
 
-
-
-
 /*Generl Syyles*/
 body {
     min-height: 100vh;
@@ -66,34 +63,30 @@ nav {
     background-color: #ffffff;
     width: 100%;
     left: 0;
-    padding: 1rem;
+    padding: 0 1rem;
     box-shadow: 2px 2px #3a3a3a;
     display: none;
     top: 100%;
 }
 
-
 /*nav toggle*/
-#nav-toggle:checked~nav{
+#nav-toggle:checked~nav {
     display: block;
 }
 
-#nav-toggle{
+#nav-toggle {
     display: none;
 }
 
-#nav-toggle-label{
+#nav-toggle-label {
     font-size: 2rem;
 }
-
 
 /*main*/
 main {
     background-color: lightblue;
-    /*Make main element take up any surplus space to push footer down */
-    flex: 1 0 auto;
     margin-top: 47px;
-
+    flex: 1 0 auto;
 }
 
 /*Footer*/
@@ -101,9 +94,9 @@ footer {
     background-color: orange;
 }
 
-/*media query: tables and larger (768px and up) */
-@media screen  and (min-width: 768px){
-    /*Header*/
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 768px) {
+    /* Header */
     nav {
         display: block;
         position: relative;
@@ -111,29 +104,35 @@ footer {
         width: fit-content;
         padding-right: 1rem;
     }
-    
-    #menu{
+
+    #menu {
         display: flex;
     }
 
     #menu > li {
         padding-left: 1rem;
-
     }
 
     .nav-toggle-label {
         display: none;
     }
 
-    #logo{
-        font-size: 200%;
+    #logo {
+        font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
     }
-        
-    main{
-        /* push main content down to accomodate larget header */
-        margin-top: 79px;
 
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
     }
 }
